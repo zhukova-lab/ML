@@ -1,0 +1,46 @@
+// Dark Shade 100%  
+@color-main: #1F2041;
+// Dark Shade 75%
+@color-choice-dropdown: rgba(31, 32, 65, 0.75); 
+// Dark Shade 50%
+@color-secondary: rgba(31, 32, 65, 0.5);
+// Dark Shade 25%
+@color-border: rgba(31, 32, 65, 0.25); 
+// Dark Shade 5% 
+@color-shadow: rgba(31, 32, 65, 0.05);
+//Purple 
+@color-base: #BC9CFF;
+// Green 
+@color-current: #6FCF97;
+@color-background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+// font
+@fontFamily: 'Montserrat';
+
+
+//mixins
+.border-radius (@radius:4px) {
+    border-radius: @radius;
+}
+.box-shadow {
+    box-shadow: 0px 10px 20px @color-shadow;
+}
+.title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: @color-main;
+}
+
+.subtitle {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: @color-main;
+}
+
+.text {
+    font-size: 14px;
+    line-height: 24px;
+    color: @color-choice-dropdown;
+}
