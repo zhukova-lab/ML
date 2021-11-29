@@ -10,3 +10,13 @@ mixin button(name,icon)
 mixin socialButton(link,value)
     a.social-button-link(href = link)
         i(class="fab fa-"+value aria-hidden="true")
+
+//navigation link
+mixin navLink(arr)
+    each value in arr
+        li.header-nav-list-item
+            if value.icon
+                a(href='link').nav-list-link.expand=value.name 
+                    i(class='nav-list-link-icon material-icons')= value.icon
+            else 
+                a(href='link').nav-list-link=value.name
