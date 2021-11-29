@@ -1,0 +1,41 @@
+.modal.modal-entry 
+    form.form(action="#")
+        h2.title.modal-form-title Войти
+        .form-items
+            +formItem("email", "Email")
+            +formItem("password", "Пароль")
+    +button('войти','arrow_forward')(class='modal-form-button')
+    .modal-create-account
+        p.text.modal-create-account-text Нет аккаунта на Toxin?
+        +button('создать','')(class='modal-button-create button-create')
+
+.modal.modal-new-user 
+    form.form(action="#")
+        h2.title.modal-new-user-title Регистрация аккаунта
+        .form-items
+            +formItem("text", "Имя")
+            +formItem("text", "Фамилия")
+        .modal-radio-buttons 
+            .modal-radio-buttons-item
+                
+                label.radio-other.text 
+                    input.radio-item(type="radio" name="gender" checked)
+                    |Мужчина
+            .modal-radio-buttons-item
+                
+                label.radio-other.text  
+                    input.radio-item(type="radio" name="gender")
+                    |Женщина
+
+        label.form-label.modal-new-user-birth дата рождения
+            input.form-item(type="text" placeholder="ДД.ММ.ГГГГ")
+        label.form-label.modal-new-user-services данные для входа в сервис
+            input.form-item(type="email" placeholder="Email")
+            input.form-item(type="password" placeholder="Пароль")
+        .modal-switch
+            .modal-switch-button.modal-switch-on
+            p.text.modal-switch-text Получать спецпредложения
+        +button('перейти к оплате','arrow_forward')
+        .modal-entry-account
+            p.text.modal-create-account-text Уже есть аккаунт на Toxin
+            +button('войти','')(class='modal-button-create button-create')
