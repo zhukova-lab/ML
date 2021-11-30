@@ -1,0 +1,98 @@
+.datepicker {
+    position: absolute;
+    z-index: 1;
+    top: 330px;
+}
+
+.ui-datepicker {
+    width: 320px;
+    font-family: 'Montserrat';
+    padding: 20px;
+    &-header {
+        background-color: #fff;
+        border: none;
+        font-size: 19px;
+        line-height: 23px;
+        color: @color-main;
+        padding: 0;
+    }
+    &-title {
+        line-height: 23px;
+    }
+    &-calendar thead {
+        font-size: 12px;
+        line-height: 15px;
+        color: #BC9CFF;
+    }
+}
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+
+/* We use html here because we need a greater specificity to make sure disabled
+works properly when clicked or hovered */
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+	border: none/*{borderColorDefault}*/;
+	background: #fff/*{bgColorDefault}*/ /*{bgImgUrlDefault}*/ /*{bgDefaultXPos}*/ /*{bgDefaultYPos}*/ /*{bgDefaultRepeat}*/;
+	font-weight: normal/*{fwDefault}*/;
+	color: rgba(31, 32, 65, 0.5);/*{fcDefault}*/;
+	font-size: 12px;
+line-height: 33px;
+}
+
+.ui-datepicker td a,
+.ui-datepicker td span {
+	width: 40px;
+    height: 40px;
+    text-align:center;
+}
+thead::after {
+    display:block;
+    content:'';
+    height: 5px;
+  }
+
+  .ui-datepicker td{
+      padding: 0;
+  }
+
+  .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+	background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.ui-widget-content .ui-state-active {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
+    
+}
+
+.selected-start,
+.selected-end {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    
+}
+
+.selected-start .ui-state-active,
+.selected-end .ui-state-active {
+    color: #FFFFFF;
+}
+
+.selected-start .ui-state-active
+ {
+  color: #FFFFFF;
+  border-radius: 22px 0 0 22px
+}
+
+.selected-end .ui-state-active {
+  color: #FFFFFF;
+  border-radius: 0 22px 22px 0
+}
+
+.ui-datepicker .ui-datepicker-buttonpane {
+    border:0;
+  }
