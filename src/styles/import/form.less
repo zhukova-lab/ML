@@ -1,0 +1,52 @@
+.form {
+    max-width: 380px;
+    .border-radius;
+    &-dates {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    &-title {
+        .title;
+    }
+    &-label {
+        position: relative;
+        .label;
+        &-icon {
+            position: absolute;
+            color: @color-secondary;
+            top: 48%;
+            right: 6%;
+            &-dropdown {
+                right: 3%;
+            }
+        }
+    }
+    &-items {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 320px;
+    }
+    &-item {
+        width: 100%;
+        padding: 12px 11px 14px 14px;
+        outline: none;
+        .border;
+        .border-radius;
+        &:focus,
+        &:hover {
+            border-color: @color-secondary;
+        }
+        &-dates {
+            max-width: 150px;
+            padding: 12px 11px 15px 14px;
+            position: relative;
+        }
+        &::placeholder {
+            color: @color-border;
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}
