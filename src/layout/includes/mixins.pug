@@ -1,4 +1,4 @@
-//button
+//-button
 mixin button(name,icon)
     if icon 
         button.button(class=attributes.class)=name
@@ -6,17 +6,32 @@ mixin button(name,icon)
     else
         button.button(class=attributes.class)=name 
 
-//social button
+//-social button
 mixin socialButton(link,value)
     a.social-button-link(href = link)
         i(class="fab fa-"+value aria-hidden="true")
 
-//navigation link
+//-navigation link
 mixin navLink(arr)
     each value in arr
-        li.header-nav-list-item
+        li.nav-list-item
             if value.icon
                 a(href='link').nav-list-link.expand=value.name 
                     i(class='nav-list-link-icon material-icons')= value.icon
             else 
                 a(href='link').nav-list-link=value.name
+
+//-form items
+mixin formItem(typeValue, placeholderValue)
+    input.form-item(type=typeValue placeholder=placeholderValue)
+
+//-form date
+mixin formDates
+    .form-dates
+        label.form-label прибытие      
+            input.form-item.form-item-dates(type='text' placeholder='ДД.ММ.ГГГГ' name='startDate')
+            i(class="form-label-icon material-icons") expand_more
+        label.form-label выезд      
+            input.form-item.form-item-dates(type='text' placeholder='ДД.ММ.ГГГГ' name='endDate')
+            i(class='form-label-icon material-icons') expand_more
+    .datepicker
