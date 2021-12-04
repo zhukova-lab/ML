@@ -1,20 +1,15 @@
-.datepicker {
-    position: absolute;
-    z-index: 1;
-    top: 330px;
-}
-
 .ui-datepicker {
     width: 320px;
     font-family: 'Montserrat';
     padding: 20px;
+    padding-top: 14px;
+    top: 330px !important;
     &-header {
         background-color: #fff;
         border: none;
         font-size: 19px;
         line-height: 23px;
         color: @color-main;
-        padding: 0;
     }
     &-title {
         line-height: 23px;
@@ -25,11 +20,14 @@
         color: #BC9CFF;
     }
 }
+.ui-datepicker .ui-datepicker-header {
+    padding: 0;
+}
+
 .ui-state-default,
 .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default,
 .ui-button,
-
 /* We use html here because we need a greater specificity to make sure disabled
 works properly when clicked or hovered */
 html .ui-button.ui-state-disabled:hover,
@@ -39,7 +37,7 @@ html .ui-button.ui-state-disabled:active {
 	font-weight: normal/*{fwDefault}*/;
 	color: rgba(31, 32, 65, 0.5);/*{fcDefault}*/;
 	font-size: 12px;
-line-height: 33px;
+    line-height: 33px;
 }
 
 .ui-datepicker td a,
@@ -48,17 +46,11 @@ line-height: 33px;
     height: 40px;
     text-align:center;
 }
-thead::after {
-    display:block;
-    content:'';
-    height: 5px;
-  }
+.ui-datepicker td{
+    padding: 0;
+}
 
-  .ui-datepicker td{
-      padding: 0;
-  }
-
-  .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
 	background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border-radius: 22px;
     font-weight: bold;
@@ -67,14 +59,12 @@ thead::after {
 
 .ui-widget-content .ui-state-active {
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.25) 0%, rgba(139, 164, 249, 0.25) 100%);
-    
 }
 
 .selected-start,
 .selected-end {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     border-radius: 22px;
-    
 }
 
 .selected-start .ui-state-active,
@@ -82,8 +72,7 @@ thead::after {
     color: #FFFFFF;
 }
 
-.selected-start .ui-state-active
- {
+.selected-start .ui-state-active{
   color: #FFFFFF;
   border-radius: 22px 0 0 22px
 }
@@ -95,4 +84,53 @@ thead::after {
 
 .ui-datepicker .ui-datepicker-buttonpane {
     border:0;
-  }
+}
+
+.ui-datepicker .ui-datepicker-prev {
+    left: -6px;
+    top: -1px;
+}
+
+.ui-datepicker .ui-datepicker-next {
+    right: -6px;
+    top: -1px;
+}
+
+.ui-datepicker-current,
+.ui-datepicker-close {
+    color: #BC9CFF!important;
+    font-weight: bold !important;
+    font-size: 12px !important;
+    line-height: 15px !important;
+    text-transform: uppercase;
+    font-family: 'Montserrat' !important;
+}
+
+.ui-datepicker .ui-datepicker-buttonpane .ui-datepicker-current {
+  margin-left: 0;
+  padding-left: 0;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+    display: flex;
+    padding: 0;
+    justify-content: space-between;
+}
+.ui-datepicker .ui-datepicker-buttonpane .ui-datepicker-close {
+    margin-right: 0;
+    padding-right: 0;
+}
+
+thead::before {
+    display:block;
+    content:'';
+    height:29px;
+}
+thead::after {
+    display:block;
+    content:'';
+    height:5px;
+}
+.ui-datepicker .ui-datepicker-buttonpane {
+    margin-top:11px;
+    margin-bottom:-10px;
+}
