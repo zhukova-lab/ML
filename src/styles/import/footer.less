@@ -1,0 +1,55 @@
+.footer {
+    background-color: #fff;
+    &-wrapper {
+        padding: 100px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &-info {
+        width: 22%;
+        margin-right: 45px;
+    }
+    &-nav {
+        display: flex;
+        flex-grow: 1;
+        margin-top: 4px;
+        &-item {
+            &:first-of-type {
+                margin-right: 57px;
+            }
+            &:last-of-type {
+                margin-left: 93px;
+            }
+        }
+        &-subtitle {
+            margin-bottom: 20px;
+        }
+        &-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+    &-text {
+        margin-top: 19px;
+        margin-bottom: 24px;
+    }
+    &-subscription {
+        position: relative;
+        width: 22%;
+        margin: 4px 5px 0 auto;
+        &-icon {
+            top: 68%;
+            right: 2%;
+            color: @color-base;
+        }
+    }
+    &-subscription .form-item{
+        width: 260px;
+    }
+    &-copy {
+        display: flex;
+        align-items: center;
+        padding: 26px 0;
+    }
+}

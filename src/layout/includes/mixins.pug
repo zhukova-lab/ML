@@ -22,16 +22,26 @@ mixin navLink(arr)
                 a(href='link').nav-list-link=value.name
 
 //-form items
-mixin formItem(typeValue, placeholderValue)
-    input.form-item(type=typeValue placeholder=placeholderValue)
+mixin formItem(typeValue, placeholderValue, icon)
+    if icon
+        input.form-item(type=typeValue placeholder=placeholderValue)
+        i.form-label-icon.form-label-icon-dropdown.material-icons(class=attributes.class)=icon
+    else 
+        input.form-item(type=typeValue placeholder=placeholderValue)
+
 
 //-form date
 mixin formDates
     .form-dates
         label.form-label прибытие      
-            input.form-item.form-item-dates(type='text' placeholder='ДД.ММ.ГГГГ' name='startDate')
+            input.form-item.form-item-dates(type='text' placeholder='ДД.ММ.ГГГГ' id='datepicker' name='startDate' class="datepicker-here")
             i(class="form-label-icon material-icons") expand_more
         label.form-label выезд      
             input.form-item.form-item-dates(type='text' placeholder='ДД.ММ.ГГГГ' name='endDate')
             i(class='form-label-icon material-icons') expand_more
-    .datepicker
+
+
+mixin footerList(arr)
+    ul.footer-nav-list
+        each value in arr  
+            li.footer-list-item=value
