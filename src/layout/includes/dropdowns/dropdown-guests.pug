@@ -1,25 +1,51 @@
 label.form-label Гости
     input.form-item.guests(type='text' placeholder='Сколько гостей')
     i(class='form-label-icon material-icons') expand_more 
-    .guests-toggle 
-        .guests-toggle-item 
+    .dropdown.dropdown-guests 
+        .dropdown-item.dropdown-guests-item 
             span Взрослые
-            .guests-stepper
-                button.guests-stepper-button.guests-stepper-button-adults-minus.guests-stepper-button-minus(type='button') -
-                span.guests-stepper-counter-adults.guests-stepper-counter 0
-                button.guests-stepper-button.guests-stepper-button-adults-plus.guests-stepper-button-plus(type='button') +
-        .guests-toggle-item 
+            .dropdown-stepper.dropdown-guests-stepper
+                button.dropdown-stepper-button.guests-stepper-button-adults-minus.guests-stepper-button-minus(type='button') -
+                span.guests-stepper-counter-adults.dropdown-stepper-counter 0
+                button.dropdown-stepper-button.guests-stepper-button-adults-plus.guests-stepper-button-plus(type='button') +
+        .dropdown-item.dropdown-guests-item 
             span Дети
-            .guests-stepper
-                button.guests-stepper-button.guests-stepper-button-children-minus.guests-stepper-button-minus(type='button') -
-                span.guests-stepper-counter-children.guests-stepper-counter 0
-                button.guests-stepper-button.guests-stepper-button-children-plus.guests-stepper-button-plus(type='button') +
-        .guests-toggle-item 
+            .dropdown-stepper.dropdown-guests-stepper
+                button.dropdown-stepper-button.guests-stepper-button-children-minus.guests-stepper-button-minus(type='button') -
+                span.guests-stepper-counter-children.dropdown-stepper-counter 0
+                button.dropdown-stepper-button.guests-stepper-button-children-plus.guests-stepper-button-plus(type='button') +
+        .dropdown-item.dropdown-guests-item 
             span Младенцы
-            .guests-stepper
-                button.guests-stepper-button.guests-stepper-button-babies-minus.guests-stepper-button-minus(type='button') -
-                span.guests-stepper-counter-babies.guests-stepper-counter 0
-                button.guests-stepper-button.guests-stepper-button-babies-plus.guests-stepper-button-plus(type='button') +
-        .guests-buttons 
-            button.guests-button.guests-button-clear(type='button')  очистить
-            button.guests-button.guests-button-apply(type='button') применить
+            .dropdown-stepper.dropdown-guests-stepper
+                button.dropdown-stepper-button.guests-stepper-button-babies-minus.guests-stepper-button-minus(type='button') -
+                span.guests-stepper-counter-babies.dropdown-stepper-counter 0
+                button.dropdown-stepper-button.guests-stepper-button-babies-plus.guests-stepper-button-plus(type='button') +
+        .dropdown-buttons 
+            button.dropdown-button.dropdown-button-clear(type='button')  очистить
+            button.dropdown-button.dropdown-button-apply(type='button') применить
+
+
+
+
+//-   .guests-toggle 
+//-         .guests-toggle-item 
+//-             span Взрослые
+//-             .guests-stepper
+//-                 button.guests-stepper-button.guests-stepper-button-adults-minus.guests-stepper-button-minus(type='button') -
+//-                 span.guests-stepper-counter-adults.guests-stepper-counter 0
+//-                 button.guests-stepper-button.guests-stepper-button-adults-plus.guests-stepper-button-plus(type='button') +
+//-         .guests-toggle-item 
+//-             span Дети
+//-             .guests-stepper
+//-                 button.guests-stepper-button.guests-stepper-button-children-minus.guests-stepper-button-minus(type='button') -
+//-                 span.guests-stepper-counter-children.guests-stepper-counter 0
+//-                 button.guests-stepper-button.guests-stepper-button-children-plus.guests-stepper-button-plus(type='button') +
+//-         .guests-toggle-item 
+//-             span Младенцы
+//-             .guests-stepper
+//-                 button.guests-stepper-button.guests-stepper-button-babies-minus.guests-stepper-button-minus(type='button') -
+//-                 span.guests-stepper-counter-babies.guests-stepper-counter 0
+//-                 button.guests-stepper-button.guests-stepper-button-babies-plus.guests-stepper-button-plus(type='button') +
+//-         .guests-buttons 
+//-             button.guests-button.guests-button-clear(type='button')  очистить
+//-             button.guests-button.guests-button-apply(type='button') применить

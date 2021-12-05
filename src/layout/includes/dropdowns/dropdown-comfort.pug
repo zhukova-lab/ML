@@ -1,0 +1,22 @@
+label.form-label удобства номера
+    input.form-item.comfort(type='text')
+    i(class='form-label-icon material-icons') expand_more 
+    .dropdown.dropdown-comfort 
+        .dropdown-item.dropdown-comfort-item 
+            span.bedroom спальни
+            .dropdown-stepper.dropdown-comfort-stepper
+                button.dropdown-stepper-button.comfort-stepper-button-bedroom-minus.comfort-stepper-button-minus(type='button') -
+                span.comfort-stepper-counter-bedroom.dropdown-stepper-counter 0
+                button.dropdown-stepper-button.comfort-stepper-button-bedroom-plus.comfort-stepper-button-plus(type='button') +
+        .dropdown-item.dropdown-comfort-item 
+            span.bed кровати
+            .dropdown-stepper.dropdown-comfort-stepper
+                button.dropdown-stepper-button.comfort-stepper-button-bed-minus.comfort-stepper-button-minus(type='button') -
+                span.comfort-stepper-counter-bed.dropdown-stepper-counter 0
+                button.dropdown-stepper-button.comfort-stepper-button-bed-plus.comfort-stepper-button-plus(type='button') +
+        .dropdown-item.dropdown-comfort-item 
+            span.bathroom ванные комнаты
+            .dropdown-stepper.dropdown-comfort-stepper
+                button.dropdown-stepper-button.comfort-stepper-button-bathroom-minus.comfort-stepper-button-minus(type='button') -
+                span.comfort-stepper-counter-bathroom.dropdown-stepper-counter 0
+                button.dropdown-stepper-button.comfort-stepper-button-bathroom-plus.comfort-stepper-button-plus(type='button') +

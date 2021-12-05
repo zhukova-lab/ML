@@ -30,6 +30,20 @@ mixin formItem(typeValue, placeholderValue, icon)
         input.form-item(type=typeValue placeholder=placeholderValue)
 
 
+//-form label
+mixin formLabel(typeValue,text,secondary)
+    if secondary
+        label(class = typeValue + '-other')
+            div(class = typeValue + '-availability-wrapper')
+                span(class = typeValue + '-secondary-text')=text
+                span(class = typeValue + '-availability-text')=secondary
+            input(class = typeValue + '-item' type=typeValue)  
+    else
+        label(class = typeValue + '-other')
+            span(class = typeValue + '-text')=text
+            input(class = typeValue + '-item' type=typeValue)
+            
+
 //-form date
 mixin formDates
     .form-dates

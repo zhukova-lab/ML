@@ -1,18 +1,18 @@
 //-guests
 
-$('.guests-toggle').hide();
-
-$(function(){
-    $('.guests').on('click',function () {
-        $('.guests-toggle').show();
-    });
-});
+$('.dropdown-guests').hide();
 
 let guests = $('.guests')
 
 $(function(){
-    $('.guests-button-apply').on('click',function () {
-        $('.guests-toggle').hide()
+    $('.guests').on('click',function () {
+        $('.dropdown-guests').show();
+    });
+});
+
+$(function(){
+    $('.dropdown-button-apply').on('click',function () {
+        $('.dropdown-guests').hide()
         let currentsSumm = +buttonMinusAdults.next().html() + +buttonMinusChildren.next().html() + +buttonMinusBabies.next().html()
         if (currentsSumm === 1 || currentsSumm % 10 === 1) {
             guests.val(currentsSumm + ' гость')
@@ -38,22 +38,22 @@ $(function(){
 
 
 $(function(){
-    $('.guests-button-clear').on('click',function () {
+    $('.dropdown-button-clear').on('click',function () {
         buttonMinusAdults.next().html(currentAdults = 0)
         buttonMinusChildren.next().html(currentChildren = 0)
         buttonMinusBabies.next().html(currentBabies = 0)
         buttonMinus.prop("disabled",true)
-        $('.guests-button-clear').hide()
+        $('.dropdown-button-clear').hide()
     })
 })
 
-$('.guests-button-clear').hide()
+$('.dropdown-button-clear').hide()
 let buttonPlus = $('.guests-stepper-button-plus');
 let buttonMinus = $('.guests-stepper-button-minus');
 
 $(function(){
     $(buttonPlus).on('click',function () {
-        $('.guests-button-clear').show()
+        $('.dropdown-button-clear').show()
     })
 })
 
@@ -129,6 +129,112 @@ $(function(){
         buttonPlusBabies.prev().html(++currentBabies)
         if(buttonMinusBabies.next().html() > 0) {
             buttonMinusBabies.prop("disabled",false)
+        }
+    })
+})
+
+
+//-comfort
+$('.dropdown-comfort').hide();
+
+let comfort = $('.comfort')
+
+$(function(){
+    $('.comfort').on('click',function () {
+        $('.dropdown-comfort').show();
+    });
+});
+
+
+let buttonMinusBedroom = $('.comfort-stepper-button-bedroom-minus');
+let buttonPlusBedroom = $('.comfort-stepper-button-bedroom-plus');
+let currentBedroom = buttonPlusBedroom.prev().html()
+
+$(function(){
+    $(buttonMinusBedroom).on('click',function () {
+        buttonMinusBedroom.next().html(--currentBedroom)
+         if(currentBedroom === 0) {
+            buttonMinusBedroom.prop("disabled",true)
+        }
+    })
+});
+
+$(function(){
+    $(buttonPlusBedroom).on('click',function () {
+        buttonPlusBedroom.prev().html(++currentBedroom)
+        if(buttonMinusBedroom.next().html() > 0) {
+            buttonMinusBedroom.prop("disabled",false)
+        }
+    })
+})
+
+$(function(){
+    buttonMinusBedroom.prop("disabled",true)
+    buttonMinusBed.prop("disabled",true)
+    buttonMinusBathroom.prop("disabled",true)
+})
+
+let buttonMinusBed = $('.comfort-stepper-button-bed-minus');
+let buttonPlusBed = $('.comfort-stepper-button-bed-plus');
+let currentBed = buttonPlusBed.prev().html()
+
+$(function(){
+    $(buttonMinusBed).on('click',function () {
+        buttonMinusBed.next().html(--currentBed)
+         if(currentBed === 0) {
+            buttonMinusBed.prop("disabled",true)
+        }
+    })
+});
+
+$(function(){
+    $(buttonPlusBed).on('click',function () {
+        buttonPlusBed.prev().html(++currentBed)
+        if(buttonMinusBed.next().html() > 0) {
+            buttonMinusBed.prop("disabled",false)
+        }
+    })
+})
+
+
+let buttonMinusBathroom = $('.comfort-stepper-button-bathroom-minus');
+let buttonPlusBathroom = $('.comfort-stepper-button-bathroom-plus');
+let currentBathroom = buttonPlusBathroom.prev().html()
+
+$(function(){
+    $(buttonMinusBathroom).on('click',function () {
+        buttonMinusBathroom.next().html(--currentBathroom)
+         if(currentBathroom === 0) {
+            buttonMinusBathroom.prop("disabled",true)
+        }
+    })
+});
+
+$(function(){
+    $(buttonPlusBathroom).on('click',function () {
+        buttonPlusBathroom.prev().html(++currentBathroom)
+        if(buttonMinusBathroom.next().html() > 0) {
+            buttonMinusBathroom.prop("disabled",false)
+        }
+    })
+})
+
+let bedroom = $('.bedroom')
+let bed = $('.bed')
+let bathroom = $('.bathroom')
+
+
+$(function(){
+    $('.rooms').on('click',function () {
+        $('.dropdown-comfort').hide();
+        if(currentBedroom === '0') {
+            comfort.val(bed.html() + ': ' + currentBed + ', ' +  bathroom.html() + ': ' + currentBathroom) 
+        } else if (currentBed === '0') {
+            comfort.val(bedroom.html() + ': ' + currentBedroom +  ', ' + bathroom.html() + ': ' + currentBathroom) 
+        } else if (currentBathroom === '0') {
+            comfort.val(bedroom.html() + ': ' + currentBedroom + ', ' + bed.html() + currentBed) 
+        } else {
+            comfort.val(bedroom.html() + ': ' + currentBedroom + ', ' +  bed.html() + ': ' + currentBed + ', ' + bathroom.html() + ': ' + currentBathroom) 
         }
     })
 })
