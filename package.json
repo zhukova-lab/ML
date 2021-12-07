@@ -38,6 +38,7 @@
     "air-datepicker": "^3.0.1",
     "daterangepicker": "^3.1.0",
     "jquery": "^3.6.0",
+    "jquery_multiselect": "^2.3.9",
     "jquery-datepicker": "^1.12.3",
     "jquery-ui": "^1.13.0",
     "reset-css": "^5.0.1",

@@ -1,5 +1,4 @@
 //-guests
-
 $('.dropdown-guests').hide();
 
 let guests = $('.guests')
@@ -36,7 +35,6 @@ $(function(){
 })
 })
 
-
 $(function(){
     $('.dropdown-button-clear').on('click',function () {
         buttonMinusAdults.next().html(currentAdults = 0)
@@ -56,7 +54,6 @@ $(function(){
         $('.dropdown-button-clear').show()
     })
 })
-
 
 let buttonMinusAdults = $('.guests-stepper-button-adults-minus');
 let buttonPlusAdults = $('.guests-stepper-button-adults-plus');
@@ -86,8 +83,6 @@ $(function(){
     })
 })
 
-
-
 let buttonMinusChildren = $('.guests-stepper-button-children-minus');
 let buttonPlusChildren = $('.guests-stepper-button-children-plus');
 let currentChildren = buttonPlusAdults.prev().html()
@@ -109,7 +104,6 @@ $(function(){
         }
     })
 })
-
 
 let buttonMinusBabies = $('.guests-stepper-button-babies-minus');
 let buttonPlusBabies = $('.guests-stepper-button-babies-plus');
@@ -133,7 +127,6 @@ $(function(){
     })
 })
 
-
 //-comfort
 $('.dropdown-comfort').hide();
 
@@ -144,7 +137,6 @@ $(function(){
         $('.dropdown-comfort').show();
     });
 });
-
 
 let buttonMinusBedroom = $('.comfort-stepper-button-bedroom-minus');
 let buttonPlusBedroom = $('.comfort-stepper-button-bedroom-plus');
@@ -196,7 +188,6 @@ $(function(){
     })
 })
 
-
 let buttonMinusBathroom = $('.comfort-stepper-button-bathroom-minus');
 let buttonPlusBathroom = $('.comfort-stepper-button-bathroom-plus');
 let currentBathroom = buttonPlusBathroom.prev().html()
@@ -223,7 +214,6 @@ let bedroom = $('.bedroom')
 let bed = $('.bed')
 let bathroom = $('.bathroom')
 
-
 $(function(){
     $('.rooms').on('click',function () {
         $('.dropdown-comfort').hide();
@@ -238,3 +228,42 @@ $(function(){
         }
     })
 })
+
+
+
+let conveniences = {
+    1: 'Завтрак',
+    2: 'Письменный стол',
+    3: 'Стул для кормления',
+    4: 'Кроватка',
+    5: 'Телевизор',
+    6: 'Шампунь',
+}
+
+$.each(conveniences, function(key, value) {
+     	$('.addition').append('<option class="spinner" value="' + key + '">' + value + '</option>');
+});
+
+import 'jquery_multiselect/jquery.multiselect.js'
+//-addition
+$(function(){
+    $('.addition').multiselect({
+        columns: 1,
+        texts: {
+            placeholder: 'Дополнительные удобства',
+        },
+    })
+})
+
+
+$(function(){
+     $('.ms-options-wrap').on('click',function () {
+        if($('.ms-options').css('display') == "none"){
+            $('.addition-wrapper-icon').css('transform' , 'rotate(0deg)')    
+        } 
+         else {
+            $('.addition-wrapper-icon').css('transform' , 'rotate(180deg)')
+        }
+    })
+})
+
