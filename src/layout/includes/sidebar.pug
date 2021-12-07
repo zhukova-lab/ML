@@ -1,0 +1,23 @@
+aside.sidebar 
+    label.form-label.sidebar-dates даты пребывания в отеле
+        +formItem('text','','expand_more')
+    label.form-label.sidebar-dates гости
+        +formItem('text','','expand_more')
+    .price 
+        label.form-label.slider-form-label диапазон цены 
+            input(type="text" class="slider-amount" readonly)
+        .slider-range
+        p.slider-range-text Стоимость за сутки пребывания в номере
+    .sidebar-rules.form-label правила дома 
+        +formLabel('checkbox', 'Можно курить')
+        +formLabel('checkbox', 'Можно с питомцами')
+        +formLabel('checkbox', 'Можно пригласить гостей (до 10 человек)')
+    .sidebar-access.form-label доступность 
+        +formLabel('checkbox', 'Широкий коридор', 'Ширина коридоров в номере не менее 91 см.')
+        +formLabel('checkbox', 'Помощник для инвалидов', 'На 1 этаже вас встретит специалист  и проводит до номера.')
+    include dropdowns/dropdown-comfort
+    include dropdowns/dropdown-addition
+    
+
+    
+    
